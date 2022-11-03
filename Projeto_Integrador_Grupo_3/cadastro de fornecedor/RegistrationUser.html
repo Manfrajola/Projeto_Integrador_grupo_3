@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estyleregistration.css">
+    <title>Cadastro de Fornecedores</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+         <img src="img/luli2.png" alt="logotomia">
+         <a class="x" href=""><img src="img/xis.svg"alt="x"></a>
+        </div>
+        
+    </header>
+    <div class="content">
+     <div class="menuslaterais">
+        <div class="link1">
+        <a href="">ESTOQUE</a>
+        </div>
+        <div class="link1">
+        <a class="a1" href="">PRODUTO</a>
+        </div>
+        <div class="link1">
+        <a href="">FORNECEDOR</a>
+        </div> 
+        </div>
+    
+        <div class="centro">
+            <p class="descricaopagina">CADASTRO DE FORNECEDOR<p>
+        <div class="profile-info">
+           <div class="inputline1"> 
+                <form class="form1" method="POST" action="/administradores/criar" onsubmit="return confirm('Confirma ação')">
+                <label class="labelname"for="name">Razão Social</label>  
+                 
+                <input type="text" class="input-register1" required name="name">
+                
+                <form method="POST" action="/administradores/criar" onsubmit="return confirm('Confirma ação')">
+                    <label class="labelid"for="tcsID">CNPJ</label>    
+                    
+                    <input type="text" class="input-register6" required name="cnpj">
+                </div>
+                <div class="inputline2">
+                <label for="datacadastro">Data de Cadastro</label>  
+                <input class="inputbox" type="date" required name="datacadastro">
+                <label for="situacao">Situação</label>  
+                <select class="inputbox3"type="text" required name="situacao">
+                    <option value="true">ATIVO</option>
+                    <option value="false">INATIVO</option>
+                </select>
+                
+                </div>
+                
+           <div class="inputline5"> 
+            <form method="POST" action="" onsubmit="return confirm('Confirma ação')">
+            <label class="labelid1"for="">Endereço</label>    
+            <input type="text" class="input-register5" required name="endereco">
+            </form>
+        </div> 
+        <div class="inputline5"> 
+            <form class="form1" method="POST" action="" onsubmit="return confirm('Confirma ação')">
+            <label class="labelid1"for="">E-mail</label>    
+            <input type="email" class="input-register3" required name="endereco">
+            </form>
+        </div>
+        <div class="inputline5"> 
+            <form class="form1" method="POST" action="" onsubmit="return confirm('Confirma ação')">
+            <label class="labelid1"for="">Telefone</label>    
+            <input type="tel" class="input-register4" required name="endereco">
+            </form>
+        </div> 
+        
+            </div>
+          </div> 
+        </div>
+        
+        <div class="buttons">
+            <button class="input-register1 buttoncancel popup" id="button">Cancelar</button>
+            <button class="input-register1 buttonsave popup" id="button2">Salvar</button>
+
+            <div id="maincontent">
+            </div>
+            <div id="overlay"></div>
+            <div id="popup">
+                <div class="popupcontrols">
+                    <span id="popupclose">X</span>
+                </div>
+                <div class="popupcontent">
+                    <h1 style="padding-bottom: 30px; padding-top: 10px;">Você tem certeza que deseja cancelar a aplicação ?</h1>
+                    <button class="input-register1 buttoncancel popup" id="buttonno">Não</button>
+                    <button class="input-register1 buttonsave popup" id="buttonyes">Sim</button>
+                </div>
+            </div>
+
+            <div id="maincontent2">
+            </div>
+            <div id="overlay2"></div>
+            <div id="popup2">
+                <div class="popupcontrols2">
+                    <span id="popupclose2">X</span>
+                </div>
+                <div class="popupcontent2">
+                    <h1 style="padding-bottom: 30px; padding-top: 10px;">Cadastro Realizado com Sucesso</h1>
+                    <button class="input-register1 buttonsave popup2" id="buttonok">OK</button>
+                </div>
+            </div>
+
+        </div>
+        
+     
+
+
+
+
+
+
+
+    
+</body>
+<script type="text/javascript">
+    // Initialize Variables
+    var closePopup = document.getElementById("popupclose");
+    var overlay = document.getElementById("overlay");
+    var popup = document.getElementById("popup");
+    var button = document.getElementById("button");
+    var buttonno = document.getElementById("buttonno")
+
+
+    var buttonyes = document.getElementById("buttonyes")
+    var closePopup2 = document.getElementById("popupclose2");
+    var overlay2 = document.getElementById("overlay2");
+    var popup2= document.getElementById("popup2");
+    var button2 = document.getElementById("button2");
+    var buttonok = document.getElementById("buttonok")
+    // Close Popup Event
+    closePopup.onclick = function() {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    };
+    // Show Overlay and Popup
+    button.onclick = function() {
+        overlay.style.display = 'block';
+        popup.style.display = 'block';
+    }
+
+    // Close Popup Event
+    buttonyes.onclick = function() {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    };
+    // Close Popup Event
+    buttonno.onclick = function() {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    };
+
+    // Close Popup Event
+    closePopup2.onclick = function() {
+        overlay2.style.display = 'none';
+        popup2.style.display = 'none';
+    };
+    // Show Overlay and Popup
+    button2.onclick = function() {
+        overlay2.style.display = 'block';
+        popup2.style.display = 'block';
+    }
+
+    // Close Popup Event
+    buttonok.onclick = function() {
+        overlay2.style.display = 'none';
+        popup2.style.display = 'none';
+    };
+</script>
+</html>

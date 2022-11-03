@@ -1,0 +1,50 @@
+.logo{
+    position: absolute;
+    width: 150px;
+    left: 20px;
+}
+.container{
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    border-radius: 100px;
+    padding: 6%;
+    background-color: #05D3F8;
+    text-align: center;
+    width: 950px;
+}
+h1,h2{
+    font-size: 50px;
+    color: aliceblue;
+}
+#menu{
+    position: absolute;
+    top: 150px;
+}
+#menu ul, li{
+    list-style-type: none;
+    font-size: 25px;
+
+}
+#menu p{
+    padding: 5px;
+    margin: 5px;
+}
+  #txtBusca{
+    float:right;
+    position: absolute;
+    background-color:transparent;
+    padding-right:5px;
+    font-size:18px;
+    border:solid 1px;
+    border-radius: 25px;
+    height:22px;
+    width:160px;
+    top: 50px;
+    right: 100px;
+  }
+
+  #txtBusca::placeholder {
+    padding-left: 5px;
+  }
+
